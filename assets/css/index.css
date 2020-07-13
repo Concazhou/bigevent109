@@ -1,0 +1,35 @@
+.layui-icon {
+    margin: 5px 8px 0 0;
+    font-size: 16px;
+}
+
+.layui-nav-child dd {
+    margin-left: 16px;
+}
+
+#user {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.text-avatar {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #419488;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+
+     display: none;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.layui-body{
+    overflow: hidden;
+}
