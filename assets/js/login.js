@@ -13,7 +13,7 @@ $('#register form').on('submit', function (e) {
     var data = $(this).serialize();
     $.ajax({
         type: 'POST',
-        url: 'http://www.liulongbin.top:3007/api/reguser',
+        url: '/api/reguser',
         data: data,
         success: function (res) {
             layer.msg(res.message);
@@ -56,7 +56,7 @@ $('#login form').on('submit', function (e) {
     var data = $(this).serialize();
     $.ajax({
         type: 'POST',
-        url: 'http://www.liulongbin.top:3007/api/login',
+        url: '/api/login',
         data: data,
         success: function (res) {
             layer.msg(res.message);
