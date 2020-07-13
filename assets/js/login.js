@@ -20,6 +20,7 @@ $('#register form').on('submit', function (e) {
             if (res.status === 0) {
                 //注册成功，显示登录盒子，隐藏注册盒子
                 $('#login').show().next().hide();
+                $('#register input').val('')
             }
         }
     })
@@ -47,4 +48,26 @@ form.verify({
             return '两次密码不一致';
         }
     }
+})
+
+//登录功能
+$('#login form').on('submit', function (e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+    $.ajax({
+        type: 'POST',
+        url: 'http://www.liulongbin.top:3007/api/login',
+        data: data,
+        success: function (res) {
+            layer.msg(res.message);
+            console.log(res.message);
+            if (res.status === 0) {
+                //登录成功
+                //把token保存到本地储存
+                localStorage.setItem('token', res.token);
+                //跳转到首页
+                location.href = '/index.html'
+            }
+        }
+    })
 })
