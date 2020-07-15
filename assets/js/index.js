@@ -10,7 +10,7 @@ function getUserInfo() {
                 //设置头像
                 if (res.data.user_pic) {
                     $('.layui-nav-img').attr('src', res.data.user_pic).show();
-                    $('text-avatar').hide();
+                    $('.text-avatar').hide();
                 } else {
                     var Firstword = name.substr(0, 1).toUpperCase();
                     console.log(Firstword);
