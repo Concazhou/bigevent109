@@ -1,5 +1,9 @@
 $.ajaxPrefilter(function (options) {
-    options.url = 'http://www.liulongbin.top:3007' + options.url;
+    // options.url = 'http://www.liulongbin.top:3007' + options.url;
+
+    options.url = 'http://ajax.frontend.itheima.net' + options.url;
+
+
 
     options.complete = function (xhr) {
         if (xhr.responseJSON.status === 1 && xhr.responseJSON.message === '身份认证失败！') {

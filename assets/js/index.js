@@ -13,7 +13,6 @@ function getUserInfo() {
                     $('.text-avatar').hide();
                 } else {
                     var Firstword = name.substr(0, 1).toUpperCase();
-                    console.log(Firstword);
                     $('.text-avatar').text(Firstword).css('display', 'inline-block');
                     $('.layui-nav-img').hide();
                 }

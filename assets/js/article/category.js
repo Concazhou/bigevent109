@@ -3,7 +3,6 @@ function getcategory() {
     $.ajax({
         url: '/my/article/cates',
         success: function (res) {
-            console.log(res);
             var html = template('tpl-list', res);
             $('tbody').html(html)
         }
